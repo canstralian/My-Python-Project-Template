@@ -25,10 +25,29 @@ python main.py
 ```
 
 ## Contributing
-Guidelines for contributing to the project.
+Fork the repository: Click on the "Fork" button at the top right corner of the page.
+
+Clone your fork:
+```bash
+git clone https://github.com/yourusername/my-python-project-template.git
+```
+Create a new branch:
+```bash
+git checkout -b feature-branch
+```
+Make your changes:
+
+Commit your changes:
+```bash
+git commit -m "Description of your changes"
+```
+Push to your fork:
+```bash
+git push origin feature-branch
+```
+Create a pull request: Go to the original repository and click on "New Pull Request".
 
 ## License
-Information about the project's license.
+Include information about the project's license.
 
-## Contact
-Contact information for the project maintainer.
+## Acknowledgments
