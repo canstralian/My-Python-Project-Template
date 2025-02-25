@@ -11,3 +11,7 @@ requests = "^2.26"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2"
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
