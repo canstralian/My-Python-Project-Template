@@ -1,14 +1,19 @@
 # My-Python-Project-Template
 
-[![Build Status](https://github.com/canstralian/My-Python-Project-Template/actions/workflows/main.yml/badge.svg)](https://github.com/canstralian/My-Python-Project-Template/actions/workflows/main.yml)
 [![PyPI version](https://badge.fury.io/py/my-python-package.svg)](https://pypi.org/project/my-python-package/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.9+](https://img.shields.io/badge/python-%3E=3.9-blue.svg)](https://www.python.org/downloads)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-## Description
+## Project Overview
 
-A brief description of what this project does and who it's for.  Be more specific here! What problem does it solve? What are its key features? Who is the target audience?  For example:  "This project provides a Python library for image processing, specifically focusing on facial recognition. It's designed for developers who need a fast and accurate way to identify faces in images or videos. Key features include..."
+**My-Python-Project-Template** is a Python project template designed to streamline the development of Python applications. It provides a structured setup with essential tools and configurations, enabling developers to focus on building features rather than setting up the environment.
+
+**Key Features**:
+
+- **Pre-configured Environment**: Includes configurations for code formatting, testing, and documentation.
+- **Dependency Management**: Utilizes Poetry for efficient dependency handling and virtual environment management.
+- **CI/CD Integration**: Comes with GitHub Actions workflows for continuous integration and deployment.
 
 ## Table of Contents
 
@@ -20,67 +25,104 @@ A brief description of what this project does and who it's for.  Be more specifi
 
 ## Installation
 
-Step-by-step instructions on how to get the development environment set up. Be specific about dependencies and how to install them. Poetry is recommended for this project.
+Follow these steps to set up the development environment:
 
-```bash
-# Using Poetry (Recommended)
-poetry install
+1. **Clone the Repository**:
 
-# If you don't have poetry, install it first:
-# pip install poetry
+   ```bash
+   git clone https://github.com/canstralian/My-Python-Project-Template.git
+   cd My-Python-Project-Template
+   ```
 
-# Or, if using pip (less preferred for this template, but possible):
-# pip install -r requirements.txt  # If you have a requirements.txt
-```
+2. **Install Dependencies Using Poetry**:
+
+   Poetry is the recommended tool for dependency management. If you don't have Poetry installed, you can install it by following the instructions on the [official website](https://python-poetry.org/docs/#installation).
+
+   ```bash
+   poetry install
+   ```
+
+   This command sets up the virtual environment and installs all necessary dependencies.
+
+3. **Activate the Virtual Environment**:
+
+   ```bash
+   poetry shell
+   ```
+
+   This activates the virtual environment, allowing you to run the project within its isolated environment.
 
 ## Usage
 
-Instructions and examples for using the project. Provide concrete examples that users can easily follow. Show how to use the library or application.
+### Running the Application
+
+To run the main application script:
+
+```bash
+poetry run python src/my_project/main.py
+```
+
+### Using the Library
+
+To use the library functions within a Python script:
 
 ```python
-# Example usage (replace with your actual commands and examples)
+from my_project import my_module
 
-# For running a script:
-poetry run python src/my_project/main.py  # Or python main.py if in the poetry shell
-
-# For library usage within a Python script:
-poetry shell  # Activate the virtual environment if not already active
-python
->>> from my_project import my_module  # Replace my_project and my_module
->>> my_module.my_function(some_argument)
->>> exit() # Exit the Python interpreter
-
-# Example showing how to use the library functions directly:
-poetry run python -c "from my_project import my_module; my_module.another_function('example')"
-
-# Or, if you have a separate example script:
-poetry run python examples/example_script.py
+result = my_module.my_function(some_argument)
+print(result)
 ```
+
+### Running Tests
+
+To run the test suite:
+
+```bash
+poetry run pytest
+```
+
+
+Ensure that your tests are located in the `tests` directory or follow the naming convention `test_*.py` for automatic discovery.
 
 ## Contributing
 
-Contributions are welcome! Please follow these steps:
+Contributions are welcome! To contribute:
 
-1. **Fork the repository:** Click on the "Fork" button at the top right corner of the page.
-2. **Clone your fork:**
+1. **Fork the Repository**: Click on the "Fork" button at the top right corner of the page.
+2. **Clone Your Fork**:
+
    ```bash
-   git clone [https://github.com/yourusername/my-python-project-template.git](https://github.com/yourusername/my-python-project-template.git)
+   git clone https://github.com/yourusername/My-Python-Project-Template.git
+   cd My-Python-Project-Template
    ```
-3. **Create a new branch:**
+
+3. **Create a New Branch**:
+
    ```bash
-   git checkout -b feature/your-feature-name  # Use a descriptive branch name
+   git checkout -b feature/your-feature-name
    ```
-4. **Make your changes:**
-5. **Commit your changes:**
+
+4. **Make Your Changes**: Implement your feature or fix.
+5. **Commit Your Changes**:
+
    ```bash
    git commit -m "Add a clear and concise description of your changes"
    ```
-6. **Push to your fork:**
+
+6. **Push to Your Fork**:
+
    ```bash
    git push origin feature/your-feature-name
    ```
-7. **Create a pull request:** Go to the original repository and click on "New Pull Request". Provide a clear description of your changes in the pull request.
+
+7. **Create a Pull Request**: Go to the original repository and click on "New Pull Request". Provide a clear description of your changes.
+
+Please ensure your code adheres to the project's coding standards and passes all tests before submitting a pull request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.  *(Create a LICENSE file in the root of your project)*
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For support or inquiries, please contact [your.email@example.com](mailto:your.email@example.com).
