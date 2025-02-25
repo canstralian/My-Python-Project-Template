@@ -1,7 +1,8 @@
 # requirements.txt
 # This file lists the required Python packages for the project.
-
-mkdocs
-mkdocs-material
+transformers
+datasets
 pytest
 flake8
+black
+huggingface_hub
