@@ -2,9 +2,11 @@
 
 [![PyPI version](https://badge.fury.io/py/my-python-package.svg)](https://pypi.org/project/my-python-package/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.9+](https://img.shields.io/badge/python-%3E=3.9-blue.svg)](https://www.python.org/downloads)
+[![Python 3.9+](https://img.shields.io/badge/python-%3E%3D3.9-blue.svg)](https://www.python.org/downloads)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Python CI](https://github.com/canstralian/My-Python-Project-Template/actions/workflows/ci.yml/badge.svg)](https://github.com/canstralian/My-Python-Project-Template/actions/workflows/ci.yml)
+[![Workflow Status](https://github.com/canstralian/My-Python-Project-Template/actions/workflows/ci.yml/badge.svg)](https://github.com/canstralian/My-Python-Project-Template/actions)
+[![Documentation Status](https://readthedocs.org/projects/my-python-project-template/badge/?version=latest)](https://my-python-project-template.readthedocs.io/en/latest/)
+[![PyPI downloads](https://img.shields.io/pypi/dm/my-python-project-template.svg)](https://pypi.org/project/my-python-project-template/)
 
 ## Project Overview
 
