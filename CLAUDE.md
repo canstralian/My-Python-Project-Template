@@ -62,7 +62,7 @@ My-Python-Project-Template/
 │   ├── workflows/          # GitHub Actions CI/CD pipelines
 │   │   ├── ci.yml          # Main CI pipeline (Black, pytest)
 │   │   ├── python-app.yml  # Alternative CI with flake8
-│   │   ├── code-review.yml # AI-powered code review (Llama-2)
+│   │   ├── code-review.yml # AI-powered code review (Claude)
 │   │   ├── huggingface-sync.yml  # Sync to Hugging Face Spaces
 │   │   ├── greetings.yml   # First-time contributor greetings
 │   │   ├── stale.yml       # Stale issue management
