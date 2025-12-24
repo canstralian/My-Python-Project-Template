@@ -640,17 +640,15 @@ poetry run pytest --cov=. --cov-report=term-missing
 
 **Always use Poetry as primary tool**:
 
-```bash
-# Add dependency
+# Add dependency and ensure lock file is updated
 poetry add <package>
 
-# Update requirements.txt
+# Update requirements.txt for CI compatibility
 poetry export -f requirements.txt --output requirements.txt --without-hashes
 
-# Commit both files
+# Commit all relevant files to ensure consistency
 git add pyproject.toml poetry.lock requirements.txt
 git commit -m "chore(deps): add <package>"
-```
 
 #### 4. Code Style Enforcement
 
