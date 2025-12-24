@@ -1,129 +1,153 @@
-# My-Python-Project-Template
+My-Python-Project-Template
 
-[![PyPI version](https://badge.fury.io/py/my-python-package.svg)](https://pypi.org/project/my-python-package/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.9+](https://img.shields.io/badge/python-%3E=3.9-blue.svg)](https://www.python.org/downloads)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Python CI](https://github.com/canstralian/My-Python-Project-Template/actions/workflows/ci.yml/badge.svg)](https://github.com/canstralian/My-Python-Project-Template/actions/workflows/ci.yml)
+A batteries-included Python project template with a clean src/ layout, Poetry dependency management, and GitHub Actions CI—so you can start building immediately.
 
-## Project Overview
+What you get
+	•	Pre-configured tooling: formatting, testing, and CI defaults.
+	•	Poetry workflow: dependency management + virtual environments.
+	•	CI-ready: GitHub Actions workflow wired up out of the box.
 
-**My-Python-Project-Template** is a Python project template designed to streamline the development of Python applications. It provides a structured setup with essential tools and configurations, enabling developers to focus on building features rather than setting up the environment.
+Table of Contents
+	•	Quickstart￼
+	•	Customize this template￼
+	•	Usage￼
+	•	Developer commands￼
+	•	Contributing￼
+	•	License￼
+	•	Contact￼
 
-**Key Features**:
+Quickstart
 
-- **Pre-configured Environment**: Includes configurations for code formatting, testing, and documentation.
-- **Dependency Management**: Utilizes Poetry for efficient dependency handling and virtual environment management.
-- **CI/CD Integration**: Comes with GitHub Actions workflows for continuous integration and deployment.
+1) Clone
 
-## Table of Contents
+git clone https://github.com/canstralian/My-Python-Project-Template.git
+cd My-Python-Project-Template
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+2) Install dependencies (Poetry)
 
-## Installation
+Install Poetry if you don’t have it yet (see Poetry docs), then:
 
-Follow these steps to set up the development environment:
+poetry install
 
-1. **Clone the Repository**:
+3) Run tests
 
-   ```bash
-   git clone https://github.com/canstralian/My-Python-Project-Template.git
-   cd My-Python-Project-Template
-   ```
+poetry run pytest
 
-2. **Install Dependencies Using Poetry**:
+4) Run the app
 
-   Poetry is the recommended tool for dependency management. If you don't have Poetry installed, you can install it by following the instructions on the [official website](https://python-poetry.org/docs/#installation).
-
-   ```bash
-   poetry install
-   ```
-
-   This command sets up the virtual environment and installs all necessary dependencies.
-
-3. **Activate the Virtual Environment**:
-
-   ```bash
-   poetry shell
-   ```
-
-   This activates the virtual environment, allowing you to run the project within its isolated environment.
-
-## Usage
-
-### Running the Application
-
-To run the main application script:
-
-```bash
 poetry run python src/my_project/main.py
-```
 
-### Using the Library
+Customize this template
 
-To use the library functions within a Python script:
+This repo ships with placeholder names. You’ll want to rename them once, early.
 
-```python
+Rename the package/module
+
+Find and replace these placeholders:
+	•	Import/package name: my_project
+	•	Example module: my_module
+	•	Example function: my_function
+	•	PyPI package name (badge + publish name): my-python-package
+
+Typical rename steps:
+	1.	Rename the source package directory:
+	•	src/my_project/ → src/<your_package_name>/
+	2.	Update imports in code/tests:
+	•	from my_project ... → from <your_package_name> ...
+	3.	Update command examples in this README:
+	•	python src/my_project/main.py → python src/<your_package_name>/main.py
+	4.	Update badges/links:
+	•	badge.fury.io/py/my-python-package.svg
+	•	pypi.org/project/my-python-package/
+
+Update project metadata
+
+In pyproject.toml, update at least:
+	•	name (PyPI name)
+	•	version
+	•	description
+	•	authors
+	•	license
+	•	readme
+	•	repository/homepage URLs (if present)
+
+(Optional) Make it a CLI
+
+If you want poetry run <command> style execution, add a console script entry in pyproject.toml (under [tool.poetry.scripts]) pointing to your main function.
+
+Usage
+
+Running the application
+
+poetry run python src/my_project/main.py
+
+Using the library
+
 from my_project import my_module
 
 result = my_module.my_function(some_argument)
 print(result)
-```
 
-### Running Tests
+Running tests
 
-To run the test suite:
-
-```bash
 poetry run pytest
-```
+
+Developer commands
+
+Common commands you’ll use while developing:
+
+Install / update deps
+
+poetry install
+poetry update
+
+Add dependencies
+
+poetry add <package>
+poetry add --group dev <package>
+
+Run formatting (Black)
+
+poetry run black .
+
+Run tests (Pytest)
+
+poetry run pytest
+
+Run a single test file
+
+poetry run pytest tests/test_example.py
+
+Run the project in an activated shell (optional)
+
+poetry shell
+python src/my_project/main.py
+
+Contributing
+	1.	Fork the repo
+	2.	Create a branch:
+
+git checkout -b feature/your-feature-name
 
 
-Ensure that your tests are located in the `tests` directory or follow the naming convention `test_*.py` for automatic discovery.
+	3.	Make changes and ensure checks pass:
 
-## Contributing
+poetry run black .
+poetry run pytest
 
-Contributions are welcome! To contribute:
 
-1. **Fork the Repository**: Click on the "Fork" button at the top right corner of the page.
-2. **Clone Your Fork**:
+	4.	Commit and push:
 
-   ```bash
-   git clone https://github.com/yourusername/My-Python-Project-Template.git
-   cd My-Python-Project-Template
-   ```
+git commit -m "Describe your change"
+git push origin feature/your-feature-name
 
-3. **Create a New Branch**:
 
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
+	5.	Open a Pull Request
 
-4. **Make Your Changes**: Implement your feature or fix.
-5. **Commit Your Changes**:
+License
 
-   ```bash
-   git commit -m "Add a clear and concise description of your changes"
-   ```
+MIT License. See LICENSE￼.
 
-6. **Push to Your Fork**:
+Contact
 
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-
-7. **Create a Pull Request**: Go to the original repository and click on "New Pull Request". Provide a clear description of your changes.
-
-Please ensure your code adheres to the project's coding standards and passes all tests before submitting a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For support or inquiries, please contact [your.email@example.com](mailto:your.email@example.com).
+Add a contact method here (e.g., GitHub Issues, email, or a handle).
