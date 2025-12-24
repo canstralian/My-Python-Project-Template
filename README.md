@@ -1,4 +1,15 @@
-My-Python-Project-Template
+# My-Python-Project-Template
+
+[![PyPI version](https://badge.fury.io/py/my-python-package.svg)](https://pypi.org/project/my-python-package/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.9+](https://img.shields.io/badge/python-%3E=3.9-blue.svg)](https://www.python.org/downloads)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Python CI](https://github.com/canstralian/My-Python-Project-Template/actions/workflows/ci.yml/badge.svg)](https://github.com/canstralian/My-Python-Project-Template/actions/workflows/ci.yml)
+
+> **Template note:** 
+
+The PyPI badge/link uses the placeholder package name `my-python-package`. Update it (and your `pyproject.toml` `name`) when you publish your own package.
+
 
 A batteries-included Python project template with a clean src/ layout, Poetry dependency management, and GitHub Actions CI—so you can start building immediately.
 
